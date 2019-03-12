@@ -1,5 +1,10 @@
-import { dimensions, fonts, colors, breakpoints } from './variables'
-import { getEmSize } from './mixins'
+import { getEmSize } from "./mixins";
+import {
+  breakpoints,
+  colors,
+  dimensions,
+  fonts
+  } from "./variables";
 
 export default `
   html {
@@ -90,11 +95,13 @@ export default `
     font-weight: 600;
     line-height: ${dimensions.lineHeight.heading};
     text-rendering: optimizeLegibility;
+    font-family: Oswald;
   }
 
   h1 {
     margin-top: 0;
     font-size: ${dimensions.headingSizes.h1}rem;
+    font-weight: 200;
   }
 
   h2 {
@@ -112,6 +119,7 @@ export default `
   p {
     margin-top: 0;
     margin-bottom: 1rem;
+    line-height: 27px;
   }
 
   strong {

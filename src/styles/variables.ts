@@ -18,7 +18,7 @@ export const colors = {
     calm: 'rgba(0, 0, 0, 0.54)'
   },
   white: '#fff',
-  black: '#000'
+  black: '#353e48'
 }
 
 export const fonts = {
@@ -57,7 +57,8 @@ export const dimensions = {
     regular: 1.45,
     heading: 1.2
   },
-  containerPadding: 1.5
+  containerPadding: 1.5,
+  containerPaddingSmall: 0.75
 }
 
 export const heights = {

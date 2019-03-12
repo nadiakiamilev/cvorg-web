@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
-
-import Page from '../components/Page'
-import Container from '../components/Container'
-import IndexLayout from '../layouts'
+import styled from "@emotion/styled";
+import { graphql } from "gatsby";
+import * as React from "react";
+import Container from "../components/Container";
+import Page from "../components/Page";
+import IndexLayout from "../layouts";
 
 interface PageTemplateProps {
   data: {
@@ -11,10 +11,6 @@ interface PageTemplateProps {
       siteMetadata: {
         title: string
         description: string
-        author: {
-          name: string
-          url: string
-        }
       }
     }
     markdownRemark: {
@@ -27,11 +23,15 @@ interface PageTemplateProps {
   }
 }
 
+const StyledHeader = styled.h1`
+  margin: 3rem 0 1.5rem 0;
+`
+
 const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
   <IndexLayout>
     <Page>
       <Container>
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
+        <StyledHeader>{data.markdownRemark.frontmatter.title}</StyledHeader>
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </Container>
     </Page>
@@ -46,10 +46,6 @@ export const query = graphql`
       siteMetadata {
         title
         description
-        author {
-          name
-          url
-        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

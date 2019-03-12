@@ -2,14 +2,9 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-starter-typescript-plus',
+    title: 'CVORG',
     description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
-    siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
-    author: {
-      name: 'Resi Respati',
-      url: 'https://twitter.com/resir014',
-      email: 'resir014@gmail.com'
-    }
+    siteUrl: 'https://http://www.chipdesignsystems.com/'
   },
   plugins: [
     {
@@ -17,6 +12,21 @@ module.exports = {
       options: {
         name: 'content',
         path: `${__dirname}/src/content`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Oswald`,
+            subsets: [`latin`]
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`]
+          }
+        ]
       }
     },
     {

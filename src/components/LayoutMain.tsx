@@ -1,5 +1,6 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
+import * as React from "react";
+import backgroundurl from "../assets/img/chip-1.jpg";
 
 const StyledLayoutMain = styled.main`
   display: flex;
